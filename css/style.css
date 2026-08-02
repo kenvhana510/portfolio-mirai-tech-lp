@@ -167,7 +167,7 @@ section[class]:not(.fv):not(.final-cta) { padding: var(--section-py) 0; }
   font-size: 18px; font-weight: 900; flex-shrink: 0;
 }
 .logo__text { display: flex; flex-direction: column; font-size: 14px; line-height: 1.3; color: var(--navy); }
-.logo__text small { font-size: 10px; font-weight: 500; color: var(--gray-500); letter-spacing: 0.06em; }
+.logo__text small { font-size: 10px; font-weight: 500; color: var(--gray-700); letter-spacing: 0.06em; }
 
 .main-nav { display: none; align-items: center; gap: 28px; }
 .main-nav ul { display: flex; gap: 24px; }
@@ -272,7 +272,7 @@ section[class]:not(.fv):not(.final-cta) { padding: var(--section-py) 0; }
 .stat-card__num { display: flex; align-items: baseline; justify-content: center; gap: 3px; font-size: clamp(30px, 6vw, 42px); font-weight: 900; color: var(--blue); }
 .stat-card__unit { font-size: 15px; font-weight: 700; color: var(--navy); }
 .stat-card__label { margin-top: 8px; font-size: 13px; color: var(--gray-700); font-weight: 500; }
-.stats__note { margin-top: 22px; font-size: 12px; color: var(--gray-500); }
+.stats__note { margin-top: 22px; font-size: 12px; color: var(--gray-700); }
 
 /* ---------- 9-2. 求職者の不安 ---------- */
 .concerns__grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
@@ -308,7 +308,7 @@ section[class]:not(.fv):not(.final-cta) { padding: var(--section-py) 0; }
 .step-line__dot {
   position: absolute; left: -30px; top: 0;
   width: 28px; height: 28px; border-radius: 50%;
-  background: var(--white); border: 2px solid var(--gray-300); color: var(--gray-500);
+  background: var(--white); border: 2px solid var(--gray-300); color: var(--gray-700);
   display: flex; align-items: center; justify-content: center;
   font-size: 12px; font-weight: 700; z-index: 1;
   transition: background var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease), color var(--dur-base) var(--ease);
@@ -364,7 +364,9 @@ section[class]:not(.fv):not(.final-cta) { padding: var(--section-py) 0; }
 .faq-item summary {
   cursor: pointer; list-style: none; padding: 16px 30px 16px 0; font-weight: 700; font-size: 14.5px;
   position: relative; min-height: 44px; display: flex; align-items: center;
+  transition: color var(--dur-fast) var(--ease);
 }
+.faq-item summary:hover, .faq-item summary:focus-visible { color: var(--blue-dark); }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::before { content: "Q"; color: var(--blue); font-weight: 900; margin-right: 10px; }
 .faq-item summary::after {
