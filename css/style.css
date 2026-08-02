@@ -346,8 +346,8 @@ section[class]:not(.fv):not(.final-cta) { padding: var(--section-py) 0; }
   background: var(--gray-50); border-radius: var(--radius-md); padding: 16px;
   font-size: 13px; font-weight: 700;
 }
-.benefit-item__icon { font-size: 22px; flex-shrink: 0; }
-.benefit-item small { font-weight: 500; color: var(--gray-500); font-size: 11px; }
+.benefit-item__icon { width: 26px; height: 26px; flex-shrink: 0; color: var(--blue); }
+.benefit-item small { font-weight: 500; color: var(--gray-700); font-size: 11px; }
 
 /* ---------- 9-10. 募集要項 ---------- */
 .req-table { border-top: 1px solid var(--gray-200); border-radius: var(--radius-md); overflow: hidden; }
