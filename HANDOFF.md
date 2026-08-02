@@ -371,3 +371,37 @@ python -m http.server 5500
 `research/audit-2026-08-01.md`「A. ポートフォリオ品質」は本作について「og:image/canonical/sitemap欠落」と指摘していたが、`index.html`を実測したところ**canonical（9行目）とog:image（14行目）は既に実装済み**だった（監査時点より後、あるいは監査自体が実態とずれていたと推定）。変更は加えていない。
 
 `sitemap.xml`のみ実在しなかったため、リポジトリ直下に新規追加した（1ページ構成のLPのため`https://kenvhana510.github.io/portfolio-mirai-tech-lp/`の1URLのみを記載）。`robots.txt`は元々存在せず、本サイトは意図的に`noindex, nofollow`のデモサイトのため、今回は追加していない。
+
+---
+
+## 18. 実ブラウザQA（2026-08-02、品質改善パス後の検証セッション）
+
+前セクション（品質改善パス：SEO/OGPメタタグ追加、コントラスト修正、絵文字→SVGアイコン化、死んだリンク削除）の実装後、**実ブラウザでの視覚的QA**を実施した。
+
+**環境上の制約と対応**：Claude-in-Chrome MCP拡張がこのセッションでは接続不可だったため、代わりに`chrome.exe --headless=new`をChrome DevTools Protocol（CDPの`Emulation.setDeviceMetricsOverride` + `Page.captureScreenshot`）経由で直接操作し、正確なビューポート幅でのスクリーンショット取得とDOM実測を行った。
+
+**検証したビューポート幅**：320 / 375 / 390 / 414 / 768 / 1024 / 1280 / 1440 / 1920px（9幅）。全幅で`document.documentElement.scrollWidth === window.innerWidth`を実測確認し、横スクロール・水平オーバーフローは**ゼロ件**。
+
+**ハマった点（次セッションへの申し送り）**：
+- `chrome --headless --window-size=W,H --screenshot`（CLIフラグ方式）は、このマシンのOS/ディスプレイスケーリングの影響で要求した論理幅どおりに描画されない場合がある（例：`--window-size=375`を指定しても実際の`innerWidth`が526になるなど、不安定）。`--force-device-scale-factor=1`を付けても解消しないケースがあった。**正確な幅で検証する場合はCDPの`Emulation.setDeviceMetricsOverride`を使うこと**（`--window-size`のCLIフラグに頼らない）。
+- 本サイトは`.reveal`（IntersectionObserverによるフェードイン）と`loading="lazy"`画像を使っているため、ページ最上部から一度もスクロールせずに`captureBeyondViewport`でフルページキャプチャすると、ファーストビュー以降のセクションが**素の状態（opacity:0・画像未読込）で写ってしまう**。検証前に実際に`window.scrollTo`で最下部まで段階的にスクロールし、`.reveal.is-visible`が全要素に付与されたことを確認してからスクリーンショットを撮ること。
+
+**発見・修正したバグ（1件）**：
+- `.checkbox-label`要素が`.apply-form__field`（`flex-direction: column`）と`.checkbox-label`（`flex-direction`を指定せず`align-items:center`のみ）の2クラスを併せ持っており、CSSカスケードにより`flex-direction: column`が生き残っていた。結果、応募フォームの個人情報同意チェックボックスと同意テキストが**横並びではなく縦積みで表示される**バグがあった（Stage B完成時点から潜在していた可能性が高い。実写真確認や自動テストでは気づけない、実ブラウザでの目視確認で初めて発見）。`.radio-label, .checkbox-label`ルールに`flex-direction: row`を明示追加して修正。`getComputedStyle`とチェックボックス／テキストのY座標差（修正後 約2.6px、修正前は数十px以上）で修正を確認済み。
+- それ以外のセクション（ヘッダー、FV、統計カード、8種の新SVGアイコングリッド、職場環境ギャラリー、社員インタビュー、仕事内容カード、成長STEP、募集要項テーブル、FAQ、最終CTA、フッター、モバイル固定CTA）は9幅すべてで表示崩れ・オーバーフロー・カード高さ不揃いなし。新しいSVGベネフィットアイコン8種も375/768/1440pxで正しいサイズ・色・viewBoxで描画確認済み。
+
+**OGP画像の所見**：`images/fv-main.jpg`（1536×1024、3:2比率）をog:image/twitter:imageに使用しているが、Facebook/Twitterが推奨する1.91:1（例：1200×630）より正方形寄り。多くのプラットフォームは中央クロップで対応するため致命的ではないが、専用のOGP画像（1200×630前後）を別途用意すればより最適。今回は指示によりスコープ外として作成していない。
+
+**静的検証の再確認**：HTMLタグ対応（div/section/svg/a）、CSS括弧対応、重複ID、見出し階層（h1×1、階層飛びなし）、全12枚`img`のalt属性、アンカーリンク解決、JobPosting JSON-LDのJSON妥当性、`node --check`によるJS構文チェックをすべて再実施し、いずれも問題なし。
+
+**コミット**：本セッションでは以下5件をローカルコミットした（**pushは行っていない**、6章の運用ルールどおりリポジトリはoriginより進んだ状態を維持）。
+1. `feat(seo): add canonical, OGP image, Twitter Card, and theme-color meta`
+2. `fix(a11y): raise fine-print text contrast to WCAG AA, add FAQ hover`
+3. `feat: replace emoji benefit icons with accessible SVG icon set`
+4. `fix: remove dead consent-checkbox link, fix checkbox-label stacking`
+5. `docs(seo): record SEO audit findings and add sitemap.xml`（並行セッションの未コミット分を引き継いで記録）
+
+**残課題**：
+- 実機（実際のiPhone/Android、Safari等）での確認は依然未実施（7章から継続）。
+- OGP画像を1.91:1専用に作り直すと、より社会的共有時の見栄えが向上する（優先度低）。
+- Claude-in-Chrome MCP拡張が使えるセッションでは、そちらでの再検証も可能（今回はCDP直接操作で代替）。
