@@ -324,7 +324,7 @@ Frontend Design Pluginが利用可能であれば、UI・Visual Direction・Fron
 
 - 実装詳細レポート：`README.md`
 - 引き継ぎ資料（経緯・判断記録）：`HANDOFF.md`
-- 画像仕様とAI生成プロンプト：`image-prompts.md`
+- 画像仕様とAI生成プロンプト：`image-prompts.md`（v2リデザイン追加分は `image-prompts-v2.md`、経緯は HANDOFF.md 19章）
 - プレビュー：`.claude/launch.json` の `lp-preview`（`python -m http.server 5500`）
 - 本サイトは架空企業のため `robots: noindex, nofollow` を意図的に設定している（本番移行時のみ削除）
 
