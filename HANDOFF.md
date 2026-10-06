@@ -405,3 +405,16 @@ python -m http.server 5500
 - 実機（実際のiPhone/Android、Safari等）での確認は依然未実施（7章から継続）。
 - OGP画像を1.91:1専用に作り直すと、より社会的共有時の見栄えが向上する（優先度低）。
 - Claude-in-Chrome MCP拡張が使えるセッションでは、そちらでの再検証も可能（今回はCDP直接操作で代替）。
+
+---
+
+## 19. v2リデザイン（2026-10-06、ブランチ `redesign/v2`・未push）
+
+ポートフォリオ6サイト共通ブリーフに基づき、`index.html` / `css/style.css` / `js/main.js` を「Industrial / Energetic / Future-facing」方向で全面刷新した。**main は未変更。push していない。**
+
+- **維持したもの**：`noindex, nofollow`、架空企業注記（CASE STUDY・フッター・stats注記・フォーム注記）、LEGACRAFTへの戻りリンク、JSON-LD、会社名・求人文言・数値・社員の声（旧版の表示文字列はすべて残存することを機械確認済み）、フォームのモック送信挙動。
+- **外部スクリプト**：cdnjs の GSAP 3.13.0（gsap.min.js / ScrollTrigger.min.js）のみ。GSAP未読込・`prefers-reduced-motion` では全要素を即表示、JS無効でも全コンテンツ可読（`html.js` クラス付与後にのみ非表示化）。
+- **シグネチャ演出**：ヒーロー（Ken Burns＋斜め光スイープ＋行スタガー＋スクロール連動）／「スタッフの1日」のPC横ピンスクロール（SPは縦リスト）／カウントアップ＋プログレスリング／社員の声は scroll-snap カルーセル（ライブラリ不使用）／職場環境フォトグリッド（ホバーで拡大＋キャプション）／巨大英字キッカーのパララックス／マーキー帯／マグネットボタン／ヘッダー縮小＋全画面ドロワー。
+- **画像**：新規9枚（`images/v2-*.webp`、合計約980KB、各300KB以下）。プロンプトと配置は `image-prompts-v2.md`。既存12枚は削除せず継続使用（JPEGフォールバックは外し WebP のみ参照）。
+- **検証**：Playwright（Chromium）で 390 / 768 / 1366 幅のフルページ撮影、横オーバーフロー0、全 `<img>` naturalWidth>0、console error 0。ドロワー開閉・フォームモック送信・reduced-motion・JS無効・横ピンのスクロール中状態も確認。
+- **注意**：`python -m http.server` は画像同時リクエストで `ERR_CONNECTION_RESET` が出る（15章既知）。検証時は Node の簡易静的サーバーを使った。横ピンスクロールのため、フルページ撮影では「スタッフの1日」の下に pin-spacer 分の暗いテクスチャ帯が写る（実ブラウザでは固定表示される領域であり、崩れではない）。

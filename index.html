@@ -17,11 +17,12 @@
 <meta name="twitter:title" content="未経験から、ものづくりのプロへ。｜株式会社ミライテック 製造スタッフ募集">
 <meta name="twitter:description" content="愛知県豊田市の自動車部品メーカーが、未経験者歓迎の製造スタッフを募集。研修・サポート体制が充実しています。">
 <meta name="twitter:image" content="https://kenvhana510.github.io/portfolio-mirai-tech-lp/images/fv-main.jpg">
-<meta name="theme-color" content="#10233f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310233f'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -72,7 +73,7 @@
         <li><a href="#requirements">募集要項</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a class="btn btn--primary btn--sm main-nav__cta" href="#apply">求人に応募する</a>
+      <a class="btn btn--primary btn--sm main-nav__cta" href="#apply"><span>求人に応募する</span><i class="btn__arrow" aria-hidden="true"></i></a>
     </nav>
 
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
@@ -81,6 +82,7 @@
   </div>
 
   <div class="mobile-nav" id="mobileNav" hidden>
+    <p class="mobile-nav__kicker" aria-hidden="true">MENU</p>
     <ul>
       <li><a href="#jobs">仕事内容</a></li>
       <li><a href="#workplace">職場環境</a></li>
@@ -90,96 +92,144 @@
       <li><a href="#requirements">募集要項</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a class="btn btn--primary btn--block" href="#apply">求人に応募する</a>
-    <a class="btn btn--outline btn--block" href="#apply">職場見学を申し込む</a>
+    <div class="mobile-nav__actions">
+      <a class="btn btn--primary btn--block" href="#apply">求人に応募する</a>
+      <a class="btn btn--outline-white btn--block" href="#apply">職場見学を申し込む</a>
+    </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ===================== FV ===================== -->
-  <section class="fv" id="top" aria-label="ファーストビュー">
-    <div class="fv__bg">
-      <picture class="fv__img">
-        <source srcset="images/fv-main.webp" type="image/webp">
-        <img src="images/fv-main.jpg" alt="ミライテックの工場で自動車部品を手に取り確認する製造スタッフ" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async">
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top" aria-label="ファーストビュー">
+    <div class="hero__bg" aria-hidden="true">
+      <picture class="hero__img">
+        <img src="images/v2-hero-floor.webp" alt="" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async">
       </picture>
-      <div class="fv__overlay" aria-hidden="true"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__sweep"></div>
+      <div class="hero__grid"></div>
     </div>
+    <p class="kicker kicker--hero" aria-hidden="true" data-kicker>FUTURE</p>
 
-    <div class="container fv__content">
-      <p class="fv__eyebrow reveal">株式会社ミライテック｜愛知県豊田市｜製造スタッフ募集</p>
-      <h1 class="fv__title reveal">未経験から、<br class="only-mobile">ものづくりのプロへ。</h1>
-      <p class="fv__sub reveal" style="--delay:0.1s">経験も、資格もいらない。<br>ここから始める、製造の仕事。</p>
+    <div class="container hero__content">
+      <p class="hero__eyebrow"><span class="hero__eyebrow-line"></span>株式会社ミライテック｜愛知県豊田市｜製造スタッフ募集</p>
+      <h1 class="hero__title">
+        <span class="line"><span class="line__in">未経験から、</span></span>
+        <span class="line"><span class="line__in">ものづくりのプロへ。</span></span>
+      </h1>
+      <p class="hero__sub"><span class="line"><span class="line__in">経験も、資格もいらない。</span></span><span class="line"><span class="line__in">ここから始める、製造の仕事。</span></span></p>
 
-      <ul class="fv__badges reveal" style="--delay:0.2s">
+      <ul class="hero__badges">
         <li>未経験歓迎</li>
         <li>年間休日120日以上</li>
         <li>賞与年2回</li>
       </ul>
 
-      <div class="fv__cta reveal" style="--delay:0.3s">
-        <a class="btn btn--primary btn--lg" href="#apply">求人に応募する</a>
-        <a class="btn btn--outline-white btn--lg" href="#workplace">職場を見てみる</a>
+      <div class="hero__cta">
+        <a class="btn btn--primary btn--lg btn--magnet" href="#apply"><span>求人に応募する</span><i class="btn__arrow" aria-hidden="true"></i></a>
+        <a class="btn btn--outline-white btn--lg btn--magnet" href="#workplace"><span>職場を見てみる</span><i class="btn__arrow" aria-hidden="true"></i></a>
       </div>
     </div>
 
-    <a class="fv__scroll" href="#stats" aria-label="次のセクションへスクロール">
-      <span></span>SCROLL
+    <a class="hero__scroll" href="#stats" aria-label="次のセクションへスクロール">
+      <span class="hero__scroll-line"></span>SCROLL
     </a>
+    <div class="hero__corner" aria-hidden="true"><span>TOYOTA, AICHI</span><span>EST. MANUFACTURING</span></div>
   </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>未経験歓迎</span><span class="marquee__dot"></span><span>年間休日120日以上</span><span class="marquee__dot"></span><span>賞与年2回</span><span class="marquee__dot"></span><span>学歴不問</span><span class="marquee__dot"></span><span>完全週休2日制</span><span class="marquee__dot"></span>
+      <span>未経験歓迎</span><span class="marquee__dot"></span><span>年間休日120日以上</span><span class="marquee__dot"></span><span>賞与年2回</span><span class="marquee__dot"></span><span>学歴不問</span><span class="marquee__dot"></span><span>完全週休2日制</span><span class="marquee__dot"></span>
+    </div>
+  </div>
 
   <!-- ===================== 働きやすさ（数字） ===================== -->
   <section class="stats" id="stats" aria-labelledby="stats-title">
+    <div class="stats__bg" aria-hidden="true">
+      <img src="images/v2-tex-lightstreak.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async" data-parallax="30">
+    </div>
+    <p class="kicker" aria-hidden="true" data-kicker>NUMBERS</p>
     <div class="container">
-      <p class="section-eyebrow reveal">WHY MIRAITECH</p>
-      <h2 class="section-title" id="stats-title">数字で見る、ミライテックの働きやすさ</h2>
+      <div class="section-head rv">
+        <p class="section-eyebrow">WHY MIRAITECH</p>
+        <h2 class="section-title" id="stats-title">数字で見る、ミライテックの働きやすさ</h2>
+      </div>
 
       <div class="stats__grid">
-        <div class="stat-card reveal">
-          <p class="stat-card__num"><span class="js-count" data-target="8.2" data-decimal="1">0</span><span class="stat-card__unit">時間</span></p>
+        <div class="stat-card rv">
+          <div class="ring" data-ring="34">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__bg" cx="60" cy="60" r="52"/><circle class="ring__fg" cx="60" cy="60" r="52"/></svg>
+            <p class="stat-card__num"><span class="js-count" data-target="8.2" data-decimal="1">0</span><span class="stat-card__unit">時間</span></p>
+          </div>
           <p class="stat-card__label">月平均残業時間</p>
         </div>
-        <div class="stat-card reveal" style="--delay:0.1s">
-          <p class="stat-card__num"><span class="js-count" data-target="78">0</span><span class="stat-card__unit">%</span></p>
+        <div class="stat-card rv">
+          <div class="ring" data-ring="78">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__bg" cx="60" cy="60" r="52"/><circle class="ring__fg" cx="60" cy="60" r="52"/></svg>
+            <p class="stat-card__num"><span class="js-count" data-target="78">0</span><span class="stat-card__unit">%</span></p>
+          </div>
           <p class="stat-card__label">有給休暇取得率</p>
         </div>
-        <div class="stat-card reveal" style="--delay:0.2s">
-          <p class="stat-card__num"><span class="js-count" data-target="92">0</span><span class="stat-card__unit">%</span></p>
+        <div class="stat-card rv">
+          <div class="ring" data-ring="92">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__bg" cx="60" cy="60" r="52"/><circle class="ring__fg" cx="60" cy="60" r="52"/></svg>
+            <p class="stat-card__num"><span class="js-count" data-target="92">0</span><span class="stat-card__unit">%</span></p>
+          </div>
           <p class="stat-card__label">未経験入社スタッフの割合</p>
         </div>
-        <div class="stat-card reveal" style="--delay:0.3s">
-          <p class="stat-card__num"><span class="js-count" data-target="120">0</span><span class="stat-card__unit">日以上</span></p>
+        <div class="stat-card rv">
+          <div class="ring" data-ring="66">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__bg" cx="60" cy="60" r="52"/><circle class="ring__fg" cx="60" cy="60" r="52"/></svg>
+            <p class="stat-card__num"><span class="js-count" data-target="120">0</span><span class="stat-card__unit">日以上</span></p>
+          </div>
           <p class="stat-card__label">年間休日</p>
         </div>
       </div>
-      <p class="stats__note reveal">※本ページはポートフォリオ用のため、数値はすべて架空の設定値です。</p>
+      <p class="stats__note rv">※本ページはポートフォリオ用のため、数値はすべて架空の設定値です。</p>
     </div>
   </section>
 
   <!-- ===================== 求職者の不安 ===================== -->
   <section class="concerns" aria-labelledby="concerns-title">
-    <div class="container">
-      <p class="section-eyebrow reveal">FOR YOUR PEACE OF MIND</p>
-      <h2 class="section-title" id="concerns-title">応募する前に、よくある不安にお答えします</h2>
-      <p class="section-lead reveal">「自分にできるだろうか」——多くの方が最初に感じる不安です。ミライテックでは、その一つひとつにきちんとお応えできる体制を整えています。</p>
+    <div class="container concerns__inner">
+      <div class="concerns__visual rv">
+        <figure class="concerns__photo concerns__photo--main">
+          <img src="images/v2-worker-vertical.webp" alt="明るい生産ラインに立つミライテックの若手スタッフ" width="1024" height="1536" loading="lazy" decoding="async" data-parallax="-30">
+        </figure>
+        <figure class="concerns__photo concerns__photo--sub">
+          <img src="images/fv-main.webp" alt="ミライテックの工場で自動車部品を手に取り確認する製造スタッフ" width="1536" height="1024" loading="lazy" decoding="async" data-parallax="30">
+        </figure>
+        <span class="concerns__tag" aria-hidden="true">Q &amp; A</span>
+      </div>
 
-      <div class="concerns__grid">
-        <div class="concern-card reveal">
-          <p class="concern-card__q">体力に自信がありません…</p>
-          <p class="concern-card__a">自動化設備が多く、力仕事は最小限です。研修期間中に無理なく体を慣らしていただけます。</p>
+      <div class="concerns__body">
+        <div class="section-head rv">
+          <p class="section-eyebrow">FOR YOUR PEACE OF MIND</p>
+          <h2 class="section-title" id="concerns-title">応募する前に、よくある不安にお答えします</h2>
+          <p class="section-lead">「自分にできるだろうか」——多くの方が最初に感じる不安です。ミライテックでは、その一つひとつにきちんとお応えできる体制を整えています。</p>
         </div>
-        <div class="concern-card reveal" style="--delay:0.1s">
-          <p class="concern-card__q">機械なんて触ったことがありません…</p>
-          <p class="concern-card__a">最初の1ヶ月は座学と実技研修が中心。専任トレーナーと先輩社員が付きっきりでサポートします。</p>
-        </div>
-        <div class="concern-card reveal" style="--delay:0.2s">
-          <p class="concern-card__q">職場の人間関係が心配です…</p>
-          <p class="concern-card__a">20〜30代が中心の職場で、分からないことを聞きやすい雰囲気を大切にしています。</p>
-        </div>
-        <div class="concern-card reveal" style="--delay:0.3s">
-          <p class="concern-card__q">長く続けられるか不安です…</p>
-          <p class="concern-card__a">作業工程はすべてマニュアル化。迷わず、着実にステップアップできる仕組みがあります。</p>
+
+        <div class="concerns__grid">
+          <div class="concern-card rv">
+            <p class="concern-card__q">体力に自信がありません…</p>
+            <p class="concern-card__a">自動化設備が多く、力仕事は最小限です。研修期間中に無理なく体を慣らしていただけます。</p>
+          </div>
+          <div class="concern-card rv">
+            <p class="concern-card__q">機械なんて触ったことがありません…</p>
+            <p class="concern-card__a">最初の1ヶ月は座学と実技研修が中心。専任トレーナーと先輩社員が付きっきりでサポートします。</p>
+          </div>
+          <div class="concern-card rv">
+            <p class="concern-card__q">職場の人間関係が心配です…</p>
+            <p class="concern-card__a">20〜30代が中心の職場で、分からないことを聞きやすい雰囲気を大切にしています。</p>
+          </div>
+          <div class="concern-card rv">
+            <p class="concern-card__q">長く続けられるか不安です…</p>
+            <p class="concern-card__a">作業工程はすべてマニュアル化。迷わず、着実にステップアップできる仕組みがあります。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -187,25 +237,33 @@
 
   <!-- ===================== 未経験でも始められる3つの理由 ===================== -->
   <section class="reasons" aria-labelledby="reasons-title">
+    <p class="kicker kicker--light" aria-hidden="true" data-kicker>CRAFT</p>
     <div class="container">
-      <p class="section-eyebrow reveal">3 REASONS</p>
-      <h2 class="section-title" id="reasons-title">「未経験」を「安心」に変える3つの理由</h2>
+      <div class="section-head rv">
+        <p class="section-eyebrow">3 REASONS</p>
+        <h2 class="section-title" id="reasons-title">「未経験」を「安心」に変える3つの理由</h2>
+      </div>
 
-      <div class="reasons__list">
-        <div class="reason-card reveal">
-          <span class="reason-card__num">01</span>
-          <h3 class="reason-card__title">充実した研修制度</h3>
-          <p class="reason-card__text">入社後1ヶ月は座学とOJTを組み合わせた研修期間。専任トレーナーが安全教育から基本動作まで丁寧に指導します。</p>
-        </div>
-        <div class="reason-card reveal" style="--delay:0.15s">
-          <span class="reason-card__num">02</span>
-          <h3 class="reason-card__title">マンツーマンサポート体制</h3>
-          <p class="reason-card__text">配属後3ヶ月間は先輩社員が専属でフォロー。分からないことをその場で質問できる環境です。</p>
-        </div>
-        <div class="reason-card reveal" style="--delay:0.3s">
-          <span class="reason-card__num">03</span>
-          <h3 class="reason-card__title">標準化されたマニュアル</h3>
-          <p class="reason-card__text">誰が読んでも分かる作業手順書と動画マニュアルを完備。自己流に頼らず、着実に習得できます。</p>
+      <div class="reasons__layout">
+        <figure class="reasons__photo rv">
+          <img src="images/v2-mentor-review.webp" alt="先輩スタッフと新人スタッフが部品を一緒に確認している様子" width="1536" height="1024" loading="lazy" decoding="async" data-parallax="-24">
+        </figure>
+        <div class="reasons__list">
+          <div class="reason-card rv">
+            <span class="reason-card__num">01</span>
+            <h3 class="reason-card__title">充実した研修制度</h3>
+            <p class="reason-card__text">入社後1ヶ月は座学とOJTを組み合わせた研修期間。専任トレーナーが安全教育から基本動作まで丁寧に指導します。</p>
+          </div>
+          <div class="reason-card rv">
+            <span class="reason-card__num">02</span>
+            <h3 class="reason-card__title">マンツーマンサポート体制</h3>
+            <p class="reason-card__text">配属後3ヶ月間は先輩社員が専属でフォロー。分からないことをその場で質問できる環境です。</p>
+          </div>
+          <div class="reason-card rv">
+            <span class="reason-card__num">03</span>
+            <h3 class="reason-card__title">標準化されたマニュアル</h3>
+            <p class="reason-card__text">誰が読んでも分かる作業手順書と動画マニュアルを完備。自己流に頼らず、着実に習得できます。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -213,73 +271,83 @@
 
   <!-- ===================== 仕事内容 ===================== -->
   <section class="jobs" id="jobs" aria-labelledby="jobs-title">
+    <p class="kicker" aria-hidden="true" data-kicker>WORK</p>
     <div class="container">
-      <p class="section-eyebrow reveal">OUR WORK</p>
-      <h2 class="section-title" id="jobs-title">あなたにお任せする仕事</h2>
-      <p class="section-lead reveal">配属先や適性に応じて、以下のような工程を担当していただきます。すべて未経験からスタートできる工程です。</p>
+      <div class="section-head section-head--split rv">
+        <div>
+          <p class="section-eyebrow">OUR WORK</p>
+          <h2 class="section-title" id="jobs-title">あなたにお任せする仕事</h2>
+        </div>
+        <p class="section-lead">配属先や適性に応じて、以下のような工程を担当していただきます。すべて未経験からスタートできる工程です。</p>
+      </div>
 
       <div class="jobs__grid">
-
-        <article class="job-card reveal">
-          <div class="img-slot img-slot--photo" style="--ratio:4/3;">
-            <picture>
-              <source srcset="images/job-operator.webp" type="image/webp">
-              <img src="images/job-operator.jpg" alt="加工機の操作パネルを操作するスタッフ" width="800" height="600" loading="lazy" decoding="async">
-            </picture>
+        <article class="job-card rv">
+          <div class="job-card__media">
+            <img src="images/job-operator.webp" alt="加工機の操作パネルを操作するスタッフ" width="800" height="600" loading="lazy" decoding="async">
+            <span class="job-card__index" aria-hidden="true">01</span>
           </div>
-          <span class="badge badge--soft">未経験OK</span>
-          <h3 class="job-card__title">機械オペレーター</h3>
-          <p class="job-card__text">自動車部品を成形・加工する機械の操作・監視を担当。ボタン操作が中心で、力仕事はほとんどありません。</p>
+          <div class="job-card__body">
+            <span class="badge badge--soft">未経験OK</span>
+            <h3 class="job-card__title">機械オペレーター</h3>
+            <p class="job-card__text">自動車部品を成形・加工する機械の操作・監視を担当。ボタン操作が中心で、力仕事はほとんどありません。</p>
+          </div>
         </article>
 
-        <article class="job-card reveal" style="--delay:0.1s">
-          <div class="img-slot img-slot--photo" style="--ratio:4/3;">
-            <picture>
-              <source srcset="images/job-logistics.webp" type="image/webp">
-              <img src="images/job-logistics.jpg" alt="台車で部品をラインへ運ぶスタッフ" width="800" height="600" loading="lazy" decoding="async">
-            </picture>
+        <article class="job-card rv">
+          <div class="job-card__media">
+            <img src="images/job-logistics.webp" alt="台車で部品をラインへ運ぶスタッフ" width="800" height="600" loading="lazy" decoding="async">
+            <span class="job-card__index" aria-hidden="true">02</span>
           </div>
-          <span class="badge badge--soft">未経験OK</span>
-          <h3 class="job-card__title">部品供給</h3>
-          <p class="job-card__text">生産ラインへの部品の補充・搬送作業。台車を使うため、重い荷物を直接持ち上げることはありません。</p>
+          <div class="job-card__body">
+            <span class="badge badge--soft">未経験OK</span>
+            <h3 class="job-card__title">部品供給</h3>
+            <p class="job-card__text">生産ラインへの部品の補充・搬送作業。台車を使うため、重い荷物を直接持ち上げることはありません。</p>
+          </div>
         </article>
 
-        <article class="job-card reveal" style="--delay:0.2s">
-          <div class="img-slot img-slot--photo" style="--ratio:4/3;">
-            <picture>
-              <source srcset="images/job-inspection.webp" type="image/webp">
-              <img src="images/job-inspection.jpg" alt="ノギスで部品寸法を確認するスタッフ" width="800" height="600" loading="lazy" decoding="async">
-            </picture>
+        <article class="job-card rv">
+          <div class="job-card__media">
+            <img src="images/job-inspection.webp" alt="ノギスで部品寸法を確認するスタッフ" width="800" height="600" loading="lazy" decoding="async">
+            <span class="job-card__index" aria-hidden="true">03</span>
           </div>
-          <span class="badge badge--soft">未経験OK</span>
-          <h3 class="job-card__title">製品検査</h3>
-          <p class="job-card__text">完成した部品の外観・寸法チェック。基準に沿って確認するだけなので、専門知識は入社後に身につけられます。</p>
+          <div class="job-card__body">
+            <span class="badge badge--soft">未経験OK</span>
+            <h3 class="job-card__title">製品検査</h3>
+            <p class="job-card__text">完成した部品の外観・寸法チェック。基準に沿って確認するだけなので、専門知識は入社後に身につけられます。</p>
+          </div>
         </article>
 
-        <article class="job-card reveal" style="--delay:0.3s">
-          <div class="img-slot img-slot--photo" style="--ratio:4/3;">
-            <picture>
-              <source srcset="images/job-quality.webp" type="image/webp">
-              <img src="images/job-quality.jpg" alt="タブレットで品質確認データを記録するスタッフ" width="800" height="600" loading="lazy" decoding="async">
-            </picture>
+        <article class="job-card rv">
+          <div class="job-card__media">
+            <img src="images/job-quality.webp" alt="タブレットで品質確認データを記録するスタッフ" width="800" height="600" loading="lazy" decoding="async">
+            <span class="job-card__index" aria-hidden="true">04</span>
           </div>
-          <span class="badge badge--soft">未経験OK</span>
-          <h3 class="job-card__title">品質確認</h3>
-          <p class="job-card__text">検査データの記録と最終確認作業。細かい作業が好きな方に向いている工程です。</p>
+          <div class="job-card__body">
+            <span class="badge badge--soft">未経験OK</span>
+            <h3 class="job-card__title">品質確認</h3>
+            <p class="job-card__text">検査データの記録と最終確認作業。細かい作業が好きな方に向いている工程です。</p>
+          </div>
         </article>
-
       </div>
     </div>
   </section>
 
   <!-- ===================== 成長STEP ===================== -->
   <section class="growth" aria-labelledby="growth-title">
+    <div class="growth__bg" aria-hidden="true">
+      <img src="images/v2-cnc-parts.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async" data-parallax="40">
+    </div>
+    <p class="kicker kicker--light" aria-hidden="true" data-kicker>CAREER</p>
     <div class="container">
-      <p class="section-eyebrow reveal">CAREER STEP</p>
-      <h2 class="section-title" id="growth-title">入社後の成長イメージ</h2>
+      <div class="section-head rv">
+        <p class="section-eyebrow">CAREER STEP</p>
+        <h2 class="section-title" id="growth-title">入社後の成長イメージ</h2>
+      </div>
 
       <ol class="step-line">
-        <li class="step-line__item reveal">
+        <span class="step-line__track" aria-hidden="true"><span class="step-line__progress" id="stepProgress"></span></span>
+        <li class="step-line__item rv">
           <span class="step-line__dot">1</span>
           <div class="step-line__body">
             <p class="step-line__time">入社〜1ヶ月</p>
@@ -287,7 +355,7 @@
             <p class="step-line__text">座学と実技で基本動作・安全教育を学びます。</p>
           </div>
         </li>
-        <li class="step-line__item reveal" style="--delay:0.1s">
+        <li class="step-line__item rv">
           <span class="step-line__dot">2</span>
           <div class="step-line__body">
             <p class="step-line__time">〜3ヶ月</p>
@@ -295,7 +363,7 @@
             <p class="step-line__text">先輩の指導のもと、実際のライン作業を担当します。</p>
           </div>
         </li>
-        <li class="step-line__item reveal" style="--delay:0.2s">
+        <li class="step-line__item rv">
           <span class="step-line__dot">3</span>
           <div class="step-line__body">
             <p class="step-line__time">〜6ヶ月</p>
@@ -303,7 +371,7 @@
             <p class="step-line__text">担当工程を一人で任せられるようになります。</p>
           </div>
         </li>
-        <li class="step-line__item reveal" style="--delay:0.3s">
+        <li class="step-line__item rv">
           <span class="step-line__dot">4</span>
           <div class="step-line__body">
             <p class="step-line__time">1年後</p>
@@ -311,7 +379,7 @@
             <p class="step-line__text">新しく入った未経験スタッフの指導を担当します。</p>
           </div>
         </li>
-        <li class="step-line__item reveal" style="--delay:0.4s">
+        <li class="step-line__item rv">
           <span class="step-line__dot">5</span>
           <div class="step-line__body">
             <p class="step-line__time">3年後</p>
@@ -325,128 +393,172 @@
 
   <!-- ===================== 職場環境 ===================== -->
   <section class="workplace" id="workplace" aria-labelledby="workplace-title">
+    <div class="workplace__bg" aria-hidden="true">
+      <img src="images/v2-tex-metal.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+    </div>
+    <p class="kicker kicker--light" aria-hidden="true" data-kicker>PLACE</p>
     <div class="container">
-      <p class="section-eyebrow reveal">WORKPLACE</p>
-      <h2 class="section-title" id="workplace-title">清潔で働きやすい職場環境</h2>
-      <p class="section-lead reveal">「工場=汚い・暑い」というイメージを変えたい。そんな想いで、設備投資と衛生管理を徹底しています。</p>
-
-      <div class="workplace__gallery">
-        <div class="img-slot img-slot--photo" style="--ratio:4/3;">
-          <picture>
-            <source srcset="images/workplace-floor.webp" type="image/webp">
-            <img src="images/workplace-floor.jpg" alt="整理整頓されたミライテックの生産フロア" width="1000" height="750" loading="lazy" decoding="async">
-          </picture>
+      <div class="section-head section-head--split rv">
+        <div>
+          <p class="section-eyebrow">WORKPLACE</p>
+          <h2 class="section-title" id="workplace-title">清潔で働きやすい職場環境</h2>
         </div>
-        <div class="img-slot img-slot--photo" style="--ratio:4/3;">
-          <picture>
-            <source srcset="images/workplace-break.webp" type="image/webp">
-            <img src="images/workplace-break.jpg" alt="明るい休憩スペースのソファ・テーブルと自動販売機" width="1000" height="750" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="img-slot img-slot--photo" style="--ratio:4/3;">
-          <picture>
-            <source srcset="images/workplace-locker.webp" type="image/webp">
-            <img src="images/workplace-locker.jpg" alt="清潔な更衣室のロッカーと作業着" width="1000" height="750" loading="lazy" decoding="async">
-          </picture>
-        </div>
+        <p class="section-lead">「工場=汚い・暑い」というイメージを変えたい。そんな想いで、設備投資と衛生管理を徹底しています。</p>
       </div>
+
+      <div class="photo-grid">
+        <figure class="photo-tile photo-tile--big rv">
+          <img src="images/workplace-floor.webp" alt="整理整頓されたミライテックの生産フロア" width="1000" height="750" loading="lazy" decoding="async">
+          <figcaption><span>01</span>生産フロア</figcaption>
+        </figure>
+        <figure class="photo-tile rv">
+          <img src="images/v2-cnc-parts.webp" alt="加工したばかりの精密金属部品とノギス" width="1536" height="1024" loading="lazy" decoding="async">
+          <figcaption><span>02</span>精密加工</figcaption>
+        </figure>
+        <figure class="photo-tile rv">
+          <img src="images/workplace-break.webp" alt="明るい休憩スペースのソファ・テーブルと自動販売機" width="1000" height="750" loading="lazy" decoding="async">
+          <figcaption><span>03</span>休憩スペース</figcaption>
+        </figure>
+        <figure class="photo-tile rv">
+          <img src="images/v2-break-coffee.webp" alt="朝の光が差し込む休憩室のテーブルとコーヒー" width="1536" height="1024" loading="lazy" decoding="async">
+          <figcaption><span>04</span>朝の休憩室</figcaption>
+        </figure>
+        <figure class="photo-tile rv">
+          <img src="images/workplace-locker.webp" alt="清潔な更衣室のロッカーと作業着" width="1000" height="750" loading="lazy" decoding="async">
+          <figcaption><span>05</span>更衣室</figcaption>
+        </figure>
+        <figure class="photo-tile photo-tile--wide rv">
+          <img src="images/v2-exterior-van.webp" alt="ミライテックの工場外観と社用車" width="1536" height="1024" loading="lazy" decoding="async">
+          <figcaption><span>06</span>工場外観</figcaption>
+        </figure>
+        <figure class="photo-tile photo-tile--wide rv">
+          <img src="images/v2-worker-tablet.webp" alt="タブレットを手に笑顔で作業するスタッフ" width="1536" height="1024" loading="lazy" decoding="async">
+          <figcaption><span>07</span>現場の様子</figcaption>
+        </figure>
     </div>
   </section>
 
   <!-- ===================== 社員インタビュー ===================== -->
   <section class="voice" id="voice" aria-labelledby="voice-title">
+    <p class="kicker kicker--light" aria-hidden="true" data-kicker>VOICE</p>
     <div class="container">
-      <p class="section-eyebrow reveal">STAFF VOICE</p>
-      <h2 class="section-title" id="voice-title">先輩スタッフの声</h2>
+      <div class="section-head section-head--split rv">
+        <div>
+          <p class="section-eyebrow">STAFF VOICE</p>
+          <h2 class="section-title" id="voice-title">先輩スタッフの声</h2>
+        </div>
+        <div class="carousel__nav" aria-label="社員の声の切り替え">
+          <button type="button" class="carousel__btn" id="voicePrev" aria-label="前の社員の声"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="carousel__btn" id="voiceNext" aria-label="次の社員の声"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
 
-      <div class="voice__grid">
-        <article class="voice-card reveal">
-          <div class="img-slot img-slot--round img-slot--photo" style="--ratio:1/1;">
-            <picture>
-              <source srcset="images/voice-tanaka.webp" type="image/webp">
-              <img src="images/voice-tanaka.jpg" alt="工場内で笑顔を見せる男性スタッフ田中さんのポートレート" width="600" height="600" loading="lazy" decoding="async">
-            </picture>
+    <div class="carousel" id="voiceCarousel">
+      <div class="carousel__track" id="voiceTrack">
+        <article class="voice-card rv">
+          <div class="voice-card__photo">
+            <img src="images/voice-tanaka.webp" alt="工場内で笑顔を見せる男性スタッフ田中さんのポートレート" width="600" height="600" loading="eager" decoding="async">
           </div>
-          <p class="voice-card__quote">「未経験でしたが、3ヶ月で一人前になれました」</p>
-          <p class="voice-card__name">田中 涼太さん（26歳）</p>
-          <p class="voice-card__meta">入社2年目・前職：飲食店スタッフ</p>
-          <p class="voice-card__text">最初は機械に触るのも怖かったですが、先輩が毎日つきっきりで教えてくれたので、気づけば一人で工程を任されるようになっていました。</p>
+          <div class="voice-card__body">
+            <p class="voice-card__quote">「未経験でしたが、3ヶ月で一人前になれました」</p>
+            <p class="voice-card__name">田中 涼太さん（26歳）</p>
+            <p class="voice-card__meta">入社2年目・前職：飲食店スタッフ</p>
+            <p class="voice-card__text">最初は機械に触るのも怖かったですが、先輩が毎日つきっきりで教えてくれたので、気づけば一人で工程を任されるようになっていました。</p>
+          </div>
         </article>
 
-        <article class="voice-card reveal" style="--delay:0.1s">
-          <div class="img-slot img-slot--round img-slot--photo" style="--ratio:1/1;">
-            <picture>
-              <source srcset="images/voice-suzuki.webp" type="image/webp">
-              <img src="images/voice-suzuki.jpg" alt="工場内で笑顔を見せる女性スタッフ鈴木さんのポートレート" width="600" height="600" loading="lazy" decoding="async">
-            </picture>
+        <article class="voice-card rv">
+          <div class="voice-card__photo">
+            <img src="images/voice-suzuki.webp" alt="工場内で笑顔を見せる女性スタッフ鈴木さんのポートレート" width="600" height="600" loading="eager" decoding="async">
           </div>
-          <p class="voice-card__quote">「女性でも無理なく続けられる仕事です」</p>
-          <p class="voice-card__name">鈴木 美咲さん（24歳）</p>
-          <p class="voice-card__meta">入社1年目・前職：アパレル販売</p>
-          <p class="voice-card__text">力仕事のイメージがありましたが、実際は機械が多くを担ってくれるので体力的な不安はなくなりました。同世代が多く働きやすいです。</p>
+          <div class="voice-card__body">
+            <p class="voice-card__quote">「女性でも無理なく続けられる仕事です」</p>
+            <p class="voice-card__name">鈴木 美咲さん（24歳）</p>
+            <p class="voice-card__meta">入社1年目・前職：アパレル販売</p>
+            <p class="voice-card__text">力仕事のイメージがありましたが、実際は機械が多くを担ってくれるので体力的な不安はなくなりました。同世代が多く働きやすいです。</p>
+          </div>
         </article>
 
-        <article class="voice-card reveal" style="--delay:0.2s">
-          <div class="img-slot img-slot--round img-slot--photo" style="--ratio:1/1;">
-            <picture>
-              <source srcset="images/voice-sato.webp" type="image/webp">
-              <img src="images/voice-sato.jpg" alt="工場内で笑顔を見せる女性スタッフ佐藤さんのポートレート" width="600" height="600" loading="lazy" decoding="async">
-            </picture>
+        <article class="voice-card rv">
+          <div class="voice-card__photo">
+            <img src="images/voice-sato.webp" alt="工場内で笑顔を見せる女性スタッフ佐藤さんのポートレート" width="600" height="600" loading="eager" decoding="async">
           </div>
-          <p class="voice-card__quote">「未経験メンバーの成長を見るのがやりがいです」</p>
-          <p class="voice-card__name">佐藤 真央さん（29歳）</p>
-          <p class="voice-card__meta">入社4年目・現場リーダー・前職：物流倉庫</p>
-          <p class="voice-card__text">今は後輩の指導を任されています。自分が未経験だったからこそ、不安な気持ちに寄り添った指導を心がけています。</p>
+          <div class="voice-card__body">
+            <p class="voice-card__quote">「未経験メンバーの成長を見るのがやりがいです」</p>
+            <p class="voice-card__name">佐藤 真央さん（29歳）</p>
+            <p class="voice-card__meta">入社4年目・現場リーダー・前職：物流倉庫</p>
+            <p class="voice-card__text">今は後輩の指導を任されています。自分が未経験だったからこそ、不安な気持ちに寄り添った指導を心がけています。</p>
+          </div>
         </article>
       </div>
+      <div class="carousel__dots" id="voiceDots" role="tablist" aria-label="社員の声のページ"></div>
     </div>
   </section>
 
   <!-- ===================== 1日の流れ ===================== -->
   <section class="day" id="day" aria-labelledby="day-title">
-    <div class="container">
-      <p class="section-eyebrow reveal">A DAY IN THE LIFE</p>
-      <h2 class="section-title" id="day-title">スタッフの1日</h2>
+    <div class="day__pin">
+      <p class="kicker kicker--light" aria-hidden="true" data-kicker>A DAY</p>
+      <div class="container">
+        <div class="section-head section-head--split rv">
+          <div>
+            <p class="section-eyebrow">A DAY IN THE LIFE</p>
+            <h2 class="section-title" id="day-title">スタッフの1日</h2>
+          </div>
+          <p class="day__hint" aria-hidden="true"><span class="day__hint-line"></span>SCROLL</p>
+        </div>
+      </div>
 
-      <ul class="day__timeline">
-        <li class="day__item reveal"><span class="day__time">8:00</span><span class="day__text">出社・着替え</span></li>
-        <li class="day__item reveal" style="--delay:0.05s"><span class="day__time">8:30</span><span class="day__text">朝礼・ラジオ体操</span></li>
-        <li class="day__item reveal" style="--delay:0.1s"><span class="day__time">8:45</span><span class="day__text">午前の作業開始</span></li>
-        <li class="day__item reveal" style="--delay:0.15s"><span class="day__time">12:00</span><span class="day__text">昼休憩（社員食堂利用可）</span></li>
-        <li class="day__item reveal" style="--delay:0.2s"><span class="day__time">13:00</span><span class="day__text">午後の作業開始</span></li>
-        <li class="day__item reveal" style="--delay:0.25s"><span class="day__time">15:00</span><span class="day__text">小休憩</span></li>
-        <li class="day__item reveal" style="--delay:0.3s"><span class="day__time">17:15</span><span class="day__text">清掃・片付け</span></li>
-        <li class="day__item reveal" style="--delay:0.35s"><span class="day__time">17:30</span><span class="day__text">終礼・退勤</span></li>
-      </ul>
+      <div class="day__viewport">
+        <ul class="day__timeline" id="dayTrack">
+          <li class="day__item rv"><span class="day__time">8:00</span><span class="day__text">出社・着替え</span></li>
+          <li class="day__item rv"><span class="day__time">8:30</span><span class="day__text">朝礼・ラジオ体操</span></li>
+          <li class="day__item rv"><span class="day__time">8:45</span><span class="day__text">午前の作業開始</span></li>
+          <li class="day__item rv"><span class="day__time">12:00</span><span class="day__text">昼休憩（社員食堂利用可）</span></li>
+          <li class="day__item rv"><span class="day__time">13:00</span><span class="day__text">午後の作業開始</span></li>
+          <li class="day__item rv"><span class="day__time">15:00</span><span class="day__text">小休憩</span></li>
+          <li class="day__item rv"><span class="day__time">17:15</span><span class="day__text">清掃・片付け</span></li>
+          <li class="day__item rv"><span class="day__time">17:30</span><span class="day__text">終礼・退勤</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- ===================== 待遇・福利厚生 ===================== -->
   <section class="benefits" id="benefits" aria-labelledby="benefits-title">
+    <p class="kicker" aria-hidden="true" data-kicker>BENEFIT</p>
     <div class="container">
-      <p class="section-eyebrow reveal">BENEFITS</p>
-      <h2 class="section-title" id="benefits-title">待遇・福利厚生</h2>
+      <div class="section-head rv">
+        <p class="section-eyebrow">BENEFITS</p>
+        <h2 class="section-title" id="benefits-title">待遇・福利厚生</h2>
+      </div>
 
       <div class="benefits__grid">
-        <div class="benefit-item reveal"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><p>各種社会保険完備<br><small>健康保険・厚生年金・雇用保険・労災保険</small></p></div>
-        <div class="benefit-item reveal" style="--delay:0.05s"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="14" width="16" height="4" rx="1"/><rect x="6" y="10" width="12" height="4" rx="1"/><rect x="8" y="6" width="8" height="4" rx="1"/></svg><p>賞与年2回<br><small>6月・12月支給</small></p></div>
-        <div class="benefit-item reveal" style="--delay:0.1s"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l6-6 4 4 6-8"/><path d="M14 6h6v6"/></svg><p>昇給年1回<br><small>4月査定</small></p></div>
-        <div class="benefit-item reveal" style="--delay:0.15s"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="6" rx="2"/><path d="M5 11l2-5h10l2 5"/><circle cx="7.5" cy="17.5" r="1.4"/><circle cx="16.5" cy="17.5" r="1.4"/></svg><p>通勤手当支給<br><small>上限あり・規定による</small></p></div>
-        <div class="benefit-item reveal" style="--delay:0.2s"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4l4 2 4-2 4 4-3 3v9H7v-9L4 8z"/></svg><p>制服貸与<br><small>作業服・安全靴支給</small></p></div>
-        <div class="benefit-item reveal" style="--delay:0.25s"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7 21l5-3 5 3-2-7.5"/></svg><p>資格取得支援制度<br><small>フォークリフト等の資格取得を補助</small></p></div>
-        <div class="benefit-item reveal" style="--delay:0.3s"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v6a2 2 0 0 0 2 2v10M7 3v5M9 3v5M11 3v5"/><path d="M17 3c-1.4 0-2.4 1.6-2.4 4.2S15.6 11 17 11v10"/></svg><p>社員食堂あり<br><small>格安で栄養バランスの取れた食事を提供</small></p></div>
-        <div class="benefit-item reveal" style="--delay:0.35s"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/></svg><p>借り上げ社宅制度<br><small>条件あり・遠方からの入社も相談可</small></p></div>
+        <div class="benefit-item rv"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><p>各種社会保険完備<br><small>健康保険・厚生年金・雇用保険・労災保険</small></p></div>
+        <div class="benefit-item rv"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="14" width="16" height="4" rx="1"/><rect x="6" y="10" width="12" height="4" rx="1"/><rect x="8" y="6" width="8" height="4" rx="1"/></svg><p>賞与年2回<br><small>6月・12月支給</small></p></div>
+        <div class="benefit-item rv"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l6-6 4 4 6-8"/><path d="M14 6h6v6"/></svg><p>昇給年1回<br><small>4月査定</small></p></div>
+        <div class="benefit-item rv"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="6" rx="2"/><path d="M5 11l2-5h10l2 5"/><circle cx="7.5" cy="17.5" r="1.4"/><circle cx="16.5" cy="17.5" r="1.4"/></svg><p>通勤手当支給<br><small>上限あり・規定による</small></p></div>
+        <div class="benefit-item rv"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4l4 2 4-2 4 4-3 3v9H7v-9L4 8z"/></svg><p>制服貸与<br><small>作業服・安全靴支給</small></p></div>
+        <div class="benefit-item rv"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7 21l5-3 5 3-2-7.5"/></svg><p>資格取得支援制度<br><small>フォークリフト等の資格取得を補助</small></p></div>
+        <div class="benefit-item rv"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v6a2 2 0 0 0 2 2v10M7 3v5M9 3v5M11 3v5"/><path d="M17 3c-1.4 0-2.4 1.6-2.4 4.2S15.6 11 17 11v10"/></svg><p>社員食堂あり<br><small>格安で栄養バランスの取れた食事を提供</small></p></div>
+        <div class="benefit-item rv"><svg class="benefit-item__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/></svg><p>借り上げ社宅制度<br><small>条件あり・遠方からの入社も相談可</small></p></div>
       </div>
     </div>
   </section>
 
   <!-- ===================== 募集要項 ===================== -->
   <section class="requirements" id="requirements" aria-labelledby="requirements-title">
-    <div class="container">
-      <p class="section-eyebrow reveal">JOB INFORMATION</p>
-      <h2 class="section-title" id="requirements-title">募集要項</h2>
+    <div class="container requirements__inner">
+      <div class="requirements__side rv">
+        <p class="section-eyebrow">JOB INFORMATION</p>
+        <h2 class="section-title" id="requirements-title">募集要項</h2>
+        <figure class="requirements__photo">
+          <img src="images/v2-worker-tablet.webp" alt="タブレットを手に笑顔で作業するミライテックのスタッフ" width="1536" height="1024" loading="lazy" decoding="async" data-parallax="-20">
+        </figure>
+      </div>
 
-      <div class="req-table reveal" role="table" aria-label="募集要項の詳細">
+      <div class="req-table rv" role="table" aria-label="募集要項の詳細">
         <div class="req-table__row" role="row"><span class="req-table__th" role="columnheader">職種</span><span class="req-table__td" role="cell">製造スタッフ（機械オペレーター／検査／部品供給 等）</span></div>
         <div class="req-table__row" role="row"><span class="req-table__th" role="columnheader">雇用形態</span><span class="req-table__td" role="cell">正社員</span></div>
         <div class="req-table__row" role="row"><span class="req-table__th" role="columnheader">勤務地</span><span class="req-table__td" role="cell">愛知県豊田市（詳細住所は面接時にご案内します）</span></div>
@@ -462,32 +574,35 @@
 
   <!-- ===================== FAQ ===================== -->
   <section class="faq" id="faq" aria-labelledby="faq-title">
-    <div class="container">
-      <p class="section-eyebrow reveal">FAQ</p>
-      <h2 class="section-title" id="faq-title">よくある質問</h2>
+    <p class="kicker" aria-hidden="true" data-kicker>FAQ</p>
+    <div class="container container--narrow">
+      <div class="section-head rv">
+        <p class="section-eyebrow">FAQ</p>
+        <h2 class="section-title" id="faq-title">よくある質問</h2>
+      </div>
 
       <div class="faq__list">
-        <details class="faq-item reveal">
+        <details class="faq-item rv">
           <summary>未経験でも本当に大丈夫ですか？</summary>
           <p>はい。現在活躍しているスタッフの9割以上が未経験からのスタートです。研修制度が充実しているのでご安心ください。</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item rv">
           <summary>女性でも働けますか？</summary>
           <p>もちろんです。力仕事は自動化設備でカバーしているため、性別を問わず多くのスタッフが活躍しています。</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item rv">
           <summary>転職回数が多いのですが応募できますか？</summary>
           <p>選考では経歴よりも「ものづくりへの興味」を重視しています。お気軽にご応募ください。</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item rv">
           <summary>職場見学だけの参加もできますか？</summary>
           <p>はい。応募前に職場の雰囲気を知っていただく「職場見学」のみのご参加も歓迎しています。</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item rv">
           <summary>勤務地の詳細はどこですか？</summary>
           <p>愛知県豊田市内の工場となります。詳細な住所や最寄駅からのアクセスは、面接時にご案内します。</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item rv">
           <summary>面接ではどんなことを聞かれますか？</summary>
           <p>特別な準備は不要です。これまでのご経験と、ものづくりへの興味について気軽にお話しください。</p>
         </details>
@@ -497,17 +612,17 @@
 
   <!-- ===================== 最終CTA ===================== -->
   <section class="final-cta" aria-labelledby="final-cta-title">
-    <picture class="final-cta__img">
-      <source srcset="images/final-cta.webp" type="image/webp">
-      <img src="images/final-cta.jpg" alt="明るい表情で談笑するミライテックの製造スタッフ3名" width="1774" height="887" loading="lazy" decoding="async">
-    </picture>
+    <div class="final-cta__bg" aria-hidden="true">
+      <img src="images/final-cta.webp" alt="" width="1774" height="887" loading="lazy" decoding="async" data-parallax="40">
+    </div>
     <div class="final-cta__overlay" aria-hidden="true"></div>
+    <p class="kicker kicker--light kicker--cta" aria-hidden="true" data-kicker>JOIN US</p>
     <div class="container final-cta__content">
-      <h2 class="final-cta__title reveal" id="final-cta-title">「やってみたい」を、<br class="only-mobile">行動に。</h2>
-      <p class="final-cta__sub reveal">未経験歓迎・年間休日120日以上・賞与年2回。<br class="only-mobile">まずは一歩、踏み出してみませんか。</p>
-      <div class="final-cta__buttons reveal">
-        <a class="btn btn--primary btn--lg" href="#apply">求人に応募する</a>
-        <a class="btn btn--outline-white btn--lg" href="#apply">職場を見てみる</a>
+      <h2 class="final-cta__title rv" id="final-cta-title"><span class="line"><span class="line__in">「やってみたい」を、</span></span><span class="line"><span class="line__in">行動に。</span></span></h2>
+      <p class="final-cta__sub rv">未経験歓迎・年間休日120日以上・賞与年2回。<br class="only-mobile">まずは一歩、踏み出してみませんか。</p>
+      <div class="final-cta__buttons rv">
+        <a class="btn btn--primary btn--lg btn--magnet" href="#apply"><span>求人に応募する</span><i class="btn__arrow" aria-hidden="true"></i></a>
+        <a class="btn btn--outline-white btn--lg btn--magnet" href="#apply"><span>職場を見てみる</span><i class="btn__arrow" aria-hidden="true"></i></a>
       </div>
     </div>
   </section>
@@ -515,11 +630,13 @@
   <!-- ===================== 応募フォーム ===================== -->
   <section class="apply" id="apply" aria-labelledby="apply-title">
     <div class="container container--narrow">
-      <p class="section-eyebrow reveal">ENTRY</p>
-      <h2 class="section-title" id="apply-title">応募フォーム</h2>
-      <p class="section-lead reveal">下記フォームよりお気軽にご応募・お問い合わせください。担当者より1〜3営業日以内にご連絡いたします。</p>
+      <div class="section-head rv">
+        <p class="section-eyebrow">ENTRY</p>
+        <h2 class="section-title" id="apply-title">応募フォーム</h2>
+        <p class="section-lead">下記フォームよりお気軽にご応募・お問い合わせください。担当者より1〜3営業日以内にご連絡いたします。</p>
+      </div>
 
-      <form class="apply-form reveal" id="applyForm" novalidate>
+      <form class="apply-form rv" id="applyForm" novalidate>
         <div class="apply-form__field">
           <label for="f-name">お名前<span class="required">必須</span></label>
           <input type="text" id="f-name" name="name" autocomplete="name" required placeholder="山田 太郎">
@@ -551,7 +668,7 @@
           <span><span class="policy-note">個人情報の取り扱いについて</span>に同意する</span>
         </label>
 
-        <button type="submit" class="btn btn--primary btn--lg btn--block">この内容で送信する</button>
+        <button type="submit" class="btn btn--primary btn--lg btn--block"><span>この内容で送信する</span><i class="btn__arrow" aria-hidden="true"></i></button>
         <p class="apply-form__note">※本フォームはポートフォリオ制作物のUIサンプルです。送信しても実際にデータは送信されません。</p>
       </form>
 
@@ -567,10 +684,12 @@
   <!-- ===================== CASE STUDY ===================== -->
   <section class="case-study" aria-labelledby="case-study-title">
     <div class="container container--narrow">
-      <p class="section-eyebrow reveal">PORTFOLIO / CASE STUDY</p>
-      <h2 class="section-title" id="case-study-title">この制作物について</h2>
+      <div class="section-head rv">
+        <p class="section-eyebrow">PORTFOLIO / CASE STUDY</p>
+        <h2 class="section-title" id="case-study-title">この制作物について</h2>
+      </div>
 
-      <dl class="case-study__grid reveal">
+      <dl class="case-study__grid rv">
         <div><dt>PROJECT</dt><dd>製造業 採用LP</dd></div>
         <div><dt>OBJECTIVE</dt><dd>未経験求職者の応募獲得</dd></div>
         <div><dt>TARGET</dt><dd>20〜30代を中心とした製造業未経験者</dd></div>
@@ -578,7 +697,7 @@
         <div><dt>SCOPE</dt><dd>企画／UX設計／コピーライティング／デザイン／レスポンシブ実装／フロントエンド実装</dd></div>
       </dl>
 
-      <div class="case-study__disclaimer reveal" role="note">
+      <div class="case-study__disclaimer rv" role="note">
         <strong>ご注意：</strong>本サイトはポートフォリオ用に制作された架空企業の採用LPであり、掲載されている企業情報・求人情報・人物・数値等はすべて架空のものです。実在する企業・人物とは一切関係ありません。
       </div>
     </div>
@@ -588,6 +707,7 @@
 
 <!-- ===================== FOOTER ===================== -->
 <footer class="site-footer">
+  <p class="site-footer__kicker" aria-hidden="true">MIRAI TECH</p>
   <div class="container site-footer__inner">
     <div class="site-footer__brand">
       <span class="logo__mark" aria-hidden="true">M</span>
@@ -612,6 +732,8 @@
   <a class="btn btn--primary btn--block" href="#apply">応募する</a>
 </div>
 
-<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
